@@ -1,0 +1,5 @@
+form{height: auto;}
+.formulario{display: flex;flex-direction: column; margin: 0 auto; background-color: gray; width: 50%;height: 600px;text-align: center;}
+input{display: flex;justify-content: center; background-color: azure; border-radius: 4px; border: solid 2px gray;text-align: center;margin: 0 auto;padding: 15px; width: 300px;}
+h1{font-size: 20PX; color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-style: italic; text-align: center;}
+#password{display: none;}

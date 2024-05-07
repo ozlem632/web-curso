@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Galeria</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+   <div class="block">
+    <div class="buton">
+        <div><button id="run" onclick="empezar()" >EMPEZAR</button> </div>
+        <div><button id="stop" onclick="stoping()">PARAR</button> </div>
+    </div>
+    <div style="display: flex; flex-direction: column; justify-content: center;">
+        <div><img id="imageness"></div>
+        <div><h1 id="textos">comentario</h1></div>
+        <div><p id="contador" style="font-size: 30px;color: red;border: solid 3px red;width: 100px;height:50px;"></p></div> <!-- Aquí agregamos el contador -->
+    </div>
+</div>
+   
+   <script>
+        var posicion=0;
+        var tiempo;
+        var time =1000;
+        const imagenes= ['kure.jpg','button-2816048_1280.jpg','heart.png','ai-generated-8584909_1280.jpg','rose-3395039_1280.jpg','storytelling-4203628_1280.jpg','tavus kusu.jpg','tulips.png','tulips.png','tulips.png','tavus kusu.jpg','tavus kusu.jpg','storytelling-4203628_1280.jpg'];
+        const texto =['kure','button','heart','ai','rose','story','tavus','tulips','tulips','tulips','tulips','button'];
+   
+        document.getElementById('imageness').src=`img/${imagenes[0]}`;
+        document.getElementById("textos").innerHTML = texto[0];
+        
+        function empezar() {
+            tiempo = setInterval(cambiar, time);
+        }
+        
+        function cambiar() {
+            document.getElementById("imageness").src = `img/${imagenes[posicion]}`;
+            document.getElementById("textos").innerHTML = texto[posicion];
+            actualizarContador(posicion); // Actualizamos el contador con la posición actual más uno
+            posicion++;
+            if (posicion >= imagenes.length) {
+                posicion = 0;
+            }
+        }
+ 
+        function stoping() {
+            clearInterval(tiempo);
+        }
+        
+        function actualizarContador(numero) {
+            document.getElementById('contador').innerText = numero + "/" + imagenes.length;
+        }
+    </script>
+</body>
+</html>

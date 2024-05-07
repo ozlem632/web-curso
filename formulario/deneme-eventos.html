@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <form>
+        <input type="text" name="Nombre" id="nombre" class="formu" placeholder="Introduce nombre..."><span id="nombreError"></span><br>
+        <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" autocomplete><span id="passwordError"></span><br>
+        <input type="color" name="color" placeholder="Intrododuce color..."><br>
+        <input type="date" name="data" ><br>
+        <input type="email" name="mail" placeholder="Email" ><br>
+        
+        <textarea name="textarea" placeholder="Introduce" columns="250" rows="6">introduceun texto</textarea><br><span id="textareaError"></span><br>
+        Provincias :
+        <select name="provincias">
+            <option value="01">Araba</option>
+            <option value="20">Gipuzkoa</option>
+            <option value="31">Nafarroa</option>
+            <option value="48">Bizkaia</option>
+            <option value="99">Bestea</option>
+        </select><br>
+        <fieldset>
+            <legend>Conocimiemtos informatica</legend> 
+            HTML <input type="checkbox" name="conocimientos[]" value="HTML"   >   
+            CSS <input type="checkbox" name="conocimientos[]"  value="CSS"  >
+            JavaScript <input type="checkbox"value="JS" name="conocimientos[]"    > 
+            
+             
+        </fieldset><br>
+            ¿Eres Mayor de edad?<br>
+            Si
+            <input type="radio" name="mayor" value="S"> No
+            <input type="radio" name="mayor" value="N">
+            <br>
+
+        <input type="button" value="enviar" id="enviar">
+        <div id="resultado"></div>
+        
+
+
+
+    </form>
+    <script>
+       /* VAMOS A SEPARAR LOS LANZADORES DE EVENTOS DEL CODIGO HTML 
+       Vamos a usar los listeners */
+       const btnEnviar = document.getElementById('enviar');
+       btnEnviar.addEventListener("click",validar,false);
+
+
+
+       
+
+       function validar(){
+            let valido = true;
+            let listaerrores='<ul>';
+            let inputNombre = document.getElementById('nombre');
+            let inputPassword = document.getElementById('password');
+            let c =inputPassword.value.length;
+            let textarea = document.querySelector('textarea');
+            console.log('entro en funcion validar');
+            if (inputNombre.value.length < 2){
+                console.log('Nombre demasiado corto');
+                console.log(document.getElementById('nombre'));
+                document.getElementById("nombreError").innerHTML= '<p>Nombre demasiado corto</p>';
+                valido = false;
+                listaerrores += '<li>Nombre demasiado corto</li>';
+                inputNombre.style.borderColor = 'red';
+            }
+
+            // Parola uzunluğunu kontrol etme
+            if (c < 6 || c> 12){
+                console.log('La contraseña debe tener entre 6 y 12 caracteres');
+                document.getElementById("passwordError").innerHTML= '<p>La contraseña debe tener entre 6 y 12 caracteres</p>';
+                valido = false;
+                listaerrores += '<li>La contraseña debe tener entre 6 y 12 caracteres</li>';
+                inputPassword.style.borderColor = 'red';
+            }
+            if (textarea.value.length < 10){
+        console.log('El texto debe tener al menos 10 caracteres');
+        document.getElementById("textareaError").innerHTML= '<p>El texto debe tener al menos 10 caracteres</p>';
+        valido = false;
+        listaerrores += '<li>El texto debe tener al menos 10 caracteres</li>';
+        textarea.style.borderColor = 'red';
+    }
+            listaerrores += '</ul>';
+            const result=document.getElementById('resultado');
+            if (valido){
+              result.style.backgroundColor = 'green';
+              result.style.color = 'white';
+              result.innerHTML = 'FORMULARIO CORRECTO';
+            } else {
+              result.style.backgroundColor = 'red';
+              result.style.color = 'white';
+              result.innerHTML = '<h3>FORMULARIO INCORRECTO</h3>' + listaerrores;
+
+            }
+       } 
+
+    </script>
+</body>
+</html>

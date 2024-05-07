@@ -1,0 +1,32 @@
+ /* selector de etiqueta  */
+p {
+    font-size: 28px;
+    color : red;
+}
+div {
+    border : 4px black dotted;
+}
+ /* selector de clave   .   */
+.resaltado {
+    border-width: 4px;
+    border-style :double;
+    border-color : blue;
+    background-color: chartreuse;
+    color: black;
+}
+ /* selector de clave  id   #    */
+#ident {
+    color : white;
+    font-weight: bolder;
+}
+
+#ernio {
+    border : 4px red solid;
+}
+#txindoki {
+    border : 4px hwb(67 0% 0%) solid;
+}
+#getaria {
+    border : 4px green solid;
+}
+

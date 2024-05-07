@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Tutoriales a tu alcance">
+    <meta name="description" content="Acá se pone la descripción del sitio">
+    <meta name="keywords" content="tutoriales, html, desarrollo web">
+    <title>FORMULARIOS</title>
+</head>
+<body>
+
+    <!-- ETIQUETA PARA FORMULARIOS -->
+        <h3>Formulario</h3>
+        <form>
+       <!--  <form name="form1" action="#" method="POST"> -->
+            <label for="texto">Entrada de texto</label>
+            <input id="texto" name="texto" type="text" placeholder="Entrada de texto" value="" >
+            
+            <br>
+            <br>
+            
+            <label for="correo">Correo</label>
+            <input id="correo" name="correo" type="email" placeholder="Entrada de correo" value="" >
+            
+            <br>
+            <br>
+            
+            <label for="pass">Entrada de contraseña</label>
+            <input id="pass" name="pass" type="password" placeholder="Entrada de contraseña" value="">
+            
+            <br>
+            <label for="comentario">Entrada de textarea</label>
+            <textarea id="comentario" name="comentarios" >Introduce comentarios</textarea>
+           
+            <br>
+            <label for="numero">Número</label>
+            <input type="number" id="numero" name="numero" value="1" min="0" max="3">
+            
+            <br>
+            <br>
+            
+            <select>
+                <option>Opcion 1</option>
+                <option>Opcion 2</option>
+                <option>Opcion 3</option>
+            </select>
+            
+            <br>
+            <br>
+            
+            <input type="checkbox" id="rojo"><label for="rojo">Rojo</label>
+            <input type="checkbox" id="amarillo"><label for="amarillo">Amarillo</label>
+            <input type="checkbox" id="verde"><label for="verde">Verde</label>
+            
+            <br>
+            <br>
+            
+            <input type="radio" id="blanco" name="radio" checked><label for="blanco">Blanco</label>
+            <input type="radio" id="negro" name="radio"><label for="negro">Negro</label>
+            
+            <br>
+            <br>
+            
+            <input type="submit" value="Enviar Formulario">
+            
+        </form>   
+    
+    </body>
+
+</html>

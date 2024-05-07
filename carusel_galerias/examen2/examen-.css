@@ -1,0 +1,53 @@
+.menu ul li {
+    display:inline-flex;
+    
+    
+    
+
+} .menu ul li a {
+    color: white;
+    text-decoration: none;
+    background-color: blue;
+}
+
+.menu ul li a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #000000;
+}
+
+
+
+.menu ul li a {
+    
+    color: #b14444;
+    text-align: center;
+    padding: 50px 25px;/* bu kod linklerin buyuklugunu ayarliyor. diger padin ve margine gerek yok */
+     list-style-type: none;
+    background-color: #f1f1f1;
+}
+
+ div {
+    
+    
+    border: 1px solid black;
+    background-color: blueviolet;
+    padding-top: 50px;
+    padding-right: 150px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+}
+.link a{
+    color:white;
+    font-size: 20px;
+    text-align: center;
+    padding: 25px 50px;/* bu kod linklerin buyuklugunu ayarliyor. diger padin ve margine gerek yok */
+     list-style-type: none;
+    background-color: #22c01c; 
+    
+
+
+}
+.link a:hover{
+    background-color: #b14444;
+}

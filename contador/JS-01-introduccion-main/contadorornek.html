@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <script>
+        /* definicion e inicializacion del numero de pulsaciones del boton*/
+        console.log('📘 Empezamos');
+        var cont = 0;
+
+
+        function contador() {
+            console.log('📙 function contador');
+            cont = cont + 1;
+            console.log("cont : " + cont);
+            document.getElementById('res').innerHTML = 'pulsaciones : ' + cont;
+            document.getElementById('res').style.display = 'block' ;
+            document.getElementById('res').style.backgroundColor="black" ;
+            document.getElementById('res').style.color="white" ;
+            document.getElementById('res').style.borderColor="red";
+
+        }
+    </script>
+    <style>
+        #res {
+            border : 3px solid rgb(99, 26, 208);
+            width: 300px;
+            padding: 15px;
+            display:block ;
+            background-color: red;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador</h1>
+    <p>Cada vez que pulsemos en el boton, vamos a sacar una alerta, indicacandop el número de veces que lo hemos pulsado,  </p>
+    <button type="button" onclick="contador()">Clica aquí</button>
+    <div id="res"><H2 style="font-size: 15px; color: black;">pulsaciones</H2>
+
+    </div>
+  
+
+
+</body>
+</html>

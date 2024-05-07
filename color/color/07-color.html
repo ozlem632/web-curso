@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - COLOR</title>
+    <script>
+        function cambiarColor() {
+            color = document.getElementById("color").value;
+            document.body.style.backgroundColor = color;
+            document.body.style.color = document.getElementById("color2").value;
+        }
+    </script>
+</head>
+<body>
+    <h1>color fondo</h1>
+    <p>Vamos a cambiar el color de fondo de la pagina con un input type color  </p>
+    color de fondo : <input type="color" id="color" name="color"> <br>
+    color de letra : <input type="color" id="color2" name="color2"> <br>
+    <button type="button" onclick="cambiarColor()">Clica aquí</button>
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con js</title>
+    <link rel="stylesheet" href="css/styl.css">
+</head>
+<body>
+     
+    
+    <div class="formulario">
+       
+       <h1>FORMULARIOS</h1>
+        <form>
+        
+            
+            <label for="username">Kullanıcı Adı:</label>
+            
+             <input type="text" id="nameinput" placeholder="introduce name">
+            <!-- <button type="button"  onclick="control()">enviar</button> -->
+      
+            <input type="password"  id="password" placeholder="introduce password">
+            <input type="email"  id="email" placeholder="introduce email" style="display: none;">
+        </form>
+
+     </div>
+<script>
+   /*  function control() {
+        var name = document.getElementById("name");
+        var password = document.getElementById("password");
+        if (name.value.length >2){
+            password.style.display="block";
+           
+        }
+        else{password.display="none"
+    }
+    } */
+    document.getElementById("nameinput").addEventListener("input", function() {
+    var isim = this.value.trim();
+    var sifreInput = document.getElementById("password");
+  
+    if (isim.length > 3) {
+      password.style.display = "block";
+    } else {
+      password.style.display = "none";
+    }
+  });
+  document.getElementById("password").addEventListener("input", function() {
+    var isim = this.value.trim();
+    var emailinput = document.getElementById("email");
+  
+    if (isim.length > 5) {
+      emailinput.style.display = "block";
+    } else {
+      emailinput.style.display = "none";
+    }
+  });
+    </script>
+
+    </body>
+</html>

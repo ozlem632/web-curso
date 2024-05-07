@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isim Dogrulama</title>
+</head>
+<body>
+
+<input type="text" id="isimInput" placeholder="İsim">
+<input type="password" id="sifreInput" style="display:none;" placeholder="Şifre">
+<input type="text" id="myInput" onblur="myFunctionBlur()" onfocus="myFunctionFocus()">
+<script src="script.js"></script>
+<script>
+document.getElementById("isimInput").addEventListener("input", function() {
+    var isim = this.value.trim();
+    var sifreInput = document.getElementById("sifreInput");
+  
+    if (isim.length > 3) {
+      sifreInput.style.display = "block";
+    } else {
+      sifreInput.style.display = "none";
+    }
+  });
+ 
+  
+function myFunctionBlur() {
+  console.log("Metin giriş alanından çıkıldı.");
+}
+
+function myFunctionFocus() {
+  console.log("Metin giriş alanına odaklandınız.");
+}
+</script>
+
+
+
+</body>
+</html>

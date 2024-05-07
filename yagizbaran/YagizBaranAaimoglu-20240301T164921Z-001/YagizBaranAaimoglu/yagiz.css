@@ -1,0 +1,79 @@
+h1{color:rgb(245, 21, 21); font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;text-align: center;}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    list-style: '❤️';
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #dd5252;
+    border: 1px solid #ccc;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}ul li {
+    
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+    
+}
+li{list-style-image: url(img/1637359590869.jpg);}
+ 
+ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color:rgb(12, 4, 4);)
+  
+
+}
+
+ ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+
+}
+
+ ul li:hover ul {
+    display: block;
+    background-color: rgb(43, 131, 231);
+    font-size: 15px;
+    
+}
+
+.c{background-color: rgb(18, 207, 28);padding: 20px;font-size: 30px ;}
+.links a{display: flex;justify-content: space-evenly; background-color: rgb(86, 236, 17) ; font-size: 15px; color:black; padding: 7px;font-style: italic;font-weight: bold;border-radius: 50%;}
+.genel{display: flex;flex-direction: column; margin: 5px;  border: solid 2px black; width: 50%;  height: 100%px}
+p{font-size: 30px; color:green;

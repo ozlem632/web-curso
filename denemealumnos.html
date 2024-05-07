@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="curso">
+    </div>
+    <div id="tutor">
+    </div>
+    <div id="alumnos">
+    </div>
+    <script>
+const curso = {
+    "curso" : "IFCD0110 - 2023-12-14",
+   "fecha_inicio" : "2023-12-14",
+   "empresa":"Alfa",
+   "lugar":"Donosti - Egia",
+   "tipo":"presencial",
+   "tutor":{
+      "Nombre":"Alberto Mozo",
+      "email":"albertomozodocente@gmail.com",
+      "linked":"https://www.linkedin.com/in/alberto-mozo-avellaned-80615713/",
+      "github":"albertomozo",
+      "url":"http://albertomozo.infinityfreeapp.com/"
+   },
+   "alumnos":[
+      {
+         "Nombre":"Fabian Luis Zambrano Salcedo",
+         "email":"zambranosalcedo@gmail.com",
+         "linked":"https://www.linkedin.com/in/fabian-zambrano-0b2623163/",
+         "github":"https://github.com/fabi1989",
+         "url":"https://app.netlify.com/teams/fabi1989/overview",
+         "imagen":"Fabian",
+         "descripcion":"intento de tienda de calcetines",
+         "inicio":{
+            "HTML":2,
+            "CSS":2,
+            "JS":1,
+            "API":0
+         },
+         "fin":{
+            "HTML":1,
+            "CSS":1,
+            "JS":1,
+            "API":2
+         }
+      },
+      {
+         "Nombre":"Idoia",
+         "email":"ilope76@gmail.com",
+         "linked":"https://www.linkedin.com/...",
+         "github":"https://github.com/IdoiaL",
+         "url":"...",
+         "imagen":"...",
+         "descripcion":"Web sobre los gatos que han pasado por mi casa",
+         "inicio":{
+            "HTML":0,
+            "CSS":0,
+            "JS":0,
+            "API":0
+         },
+         "fin":{
+            "HTML":0,
+            "CSS":0,
+            "JS":0,
+            "API":0
+         }
+      },
+      {
+         "Nombre":"Andrés Martín García",
+         "email":"Andres.Alfa.Formacion@gmail.com",
+         "linked":"https://www.linkedin.com/",
+         "github":"https://github.com/AndresAlfa",
+         "url":"https://andreoidhello.netlify.app/",
+         "imagen":"",
+         "descripcion":"La mejor web del mundo mundial",
+         "inicio":{
+            "HTML":1,
+            "CSS":1,
+            "JS":1,
+            "API":2
+         },
+         "fin":{
+            "HTML":1,
+            "CSS":1,
+            "JS":1,
+            "API":2
+         }
+      },
+      {
+         "Nombre":"Ozlem ",
+         "email":"ozlemasimoglu@gmail.com",
+         "linked":"https://github.com/ozlem632/",
+         "github":"https://www.linkedin.com/in/ozlem-asimoglu/",
+         "url":"",
+         "imagen":"",
+         "descripcion":"Descripción de vuestra web",
+         "inicio":{
+            "HTML":1,
+            "CSS":1,
+            "JS":1,
+            "API":2
+         },
+         "fin":{
+            "HTML":1,
+            "CSS":1,
+            "JS":1,
+            "API":2
+         }
+      },
+      {
+         "Nombre":"MOHAMED",
+         "email":"421208nasser@gmail.com",
+         "linked":"",
+         "github":"https://github.com",
+         "url":"http://infinityfreeapp.com/",
+         "imagen":"alumno1.png",
+         "descripcion":"Descripción de vuestra web",
+         "inicio":{
+            "HTML":1,
+            "CSS":1,
+            "JS":1,
+            "API":2
+         },
+         "fin":{
+            "HTML":1,
+            "CSS":1,
+            "JS":1,
+            "API":2
+         }
+      }
+   ]
+};
+
+        // Kurs bilgilerini alma
+        let textoCurso = '';
+        textoCurso += `<h2>${curso.curso}</h2>`;
+        textoCurso += '<ul>';
+        textoCurso += `<li>Inicio : ${curso.fecha_inicio}</li>`;
+        textoCurso += `<li>Localizacion : ${curso.lugar}</li>`;
+        textoCurso += '</ul>';
+        document.getElementById('curso').innerHTML = textoCurso;
+
+        // Tutor bilgilerini alma
+        let textoTutor = '<hr>';
+        textoTutor += `<h2>Tutor : ${curso.tutor.Nombre}</h2>`;
+        textoTutor += '<ul>';
+        textoTutor += `<li>linked : ${curso.tutor.linked}</li>`;
+        textoTutor += '</ul>';
+        document.getElementById('tutor').innerHTML = textoTutor;
+
+        // Öğrenci bilgilerini alma
+        let textoAlumnos = '<hr>';
+        textoAlumnos += `<h2>Alumnos ( ${curso.alumnos.length} )</h2>`;
+        for (let i = 0; i < curso.alumnos.length; i++) {
+            textoAlumnos += '<ul>';
+            for (let key in curso.alumnos[i]) {
+                if (key !== 'inicio' && key !== 'fin') {
+                    textoAlumnos += `<li>${key.charAt(0).toUpperCase() + key.slice(1)}: ${curso.alumnos[i][key]}</li>`;
+                } else {
+                    textoAlumnos += `<li>${key.charAt(0).toUpperCase() + key.slice(1)}:</li>`;
+                    textoAlumnos += '<ul>';
+                    for (let subKey in curso.alumnos[i][key]) {
+                        textoAlumnos += `<li>${subKey}: ${curso.alumnos[i][key][subKey]}</li>`;
+                    }
+                    textoAlumnos += '</ul>';
+                }
+            }
+            textoAlumnos += '</ul>';
+        }
+        document.getElementById('alumnos').innerHTML = textoAlumnos;
+    </script>
+</body>
+</html>

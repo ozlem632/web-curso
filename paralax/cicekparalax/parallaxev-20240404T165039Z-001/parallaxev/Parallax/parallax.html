@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>PARALLAX</title>
+
+<style>
+    *,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    height: 100vh; 
+    overflow-x:  hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+section{
+
+    transform-style: preserve-3d;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    
+
+}
+section h1{
+  
+    text-align: center;
+    font-size: 4rem;
+    font-family:sans-serif;
+    
+
+}
+.no-parallax{
+    background-color: rgb(175, 175, 15);
+height: 200px;
+    z-index: 999;
+}
+.parallax h1{
+    width: 60%;
+  height:200px ;
+ font-size: 2rem;
+}
+#olcu{
+    height: 500px; ;
+}
+
+.parallax::after{
+content: " " ;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+transform: translateZ(-1px) scale(1.5);
+width: 100%; 
+z-index: -1;
+
+}
+.bg::after{
+
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(francesco-ZxNKxnR32Ng-unsplash.jpg);
+    
+ background-size: cover;
+
+
+
+}
+</style>
+
+
+
+</head>
+<body>
+    <main>
+        
+<section class="no-parallax"> 
+    <h1>LOGOTIPO</h1>
+
+  </section>
+
+  <section class="parallax bg" > 
+    <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur quibusdam fuga, rem maiores voluptas necessitatibus repellat neque obcaecati aliquid, corrupti laborum ipsam commodi voluptatem aut cumque alias consequuntur nihil inventore.</h1>
+    
+ 
+    
+
+
+</section>
+
+  <section class="no-parallax"> 
+    <h1>Lorem ipsum dolor  </h1>
+
+  </section>
+
+
+
+</main>
+</body>
+</html>
